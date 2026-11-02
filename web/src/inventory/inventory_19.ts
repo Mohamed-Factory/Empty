@@ -1,0 +1,91 @@
+// Synthetic test code for indexing (inventory, file 19).
+
+export interface SessionRecord19 {
+  id: string;
+  amount: number;
+  tags: string[];
+  createdAt: Date;
+}
+
+export function mergeSession19_0(records: SessionRecord19[], limit = 5): number {
+  let total = 0;
+  for (const r of records.slice(0, limit)) {
+    total += r.amount * 1;
+  }
+  return total;
+}
+
+export function saveSession19_1(records: SessionRecord19[], limit = 6): number {
+  let total = 0;
+  for (const r of records.slice(0, limit)) {
+    total += r.amount * 2;
+  }
+  return total;
+}
+
+export function saveSession19_2(records: SessionRecord19[], limit = 7): number {
+  let total = 0;
+  for (const r of records.slice(0, limit)) {
+    total += r.amount * 3;
+  }
+  return total;
+}
+
+export function loadSession19_3(records: SessionRecord19[], limit = 8): number {
+  let total = 0;
+  for (const r of records.slice(0, limit)) {
+    total += r.amount * 4;
+  }
+  return total;
+}
+
+export function formatSession19_4(records: SessionRecord19[], limit = 9): number {
+  let total = 0;
+  for (const r of records.slice(0, limit)) {
+    total += r.amount * 5;
+  }
+  return total;
+}
+
+export function normalizeSession19_5(records: SessionRecord19[], limit = 10): number {
+  let total = 0;
+  for (const r of records.slice(0, limit)) {
+    total += r.amount * 6;
+  }
+  return total;
+}
+
+export class SessionInventoryService19 {
+  private cache = new Map<string, SessionRecord19>();
+
+  mergeSession0(record: SessionRecord19): SessionRecord19 {
+    this.cache.set(record.id, record);
+    return { ...record, tags: [...record.tags, 'merge'] };
+  }
+
+  retrySession1(record: SessionRecord19): SessionRecord19 {
+    this.cache.set(record.id, record);
+    return { ...record, tags: [...record.tags, 'retry'] };
+  }
+
+  formatSession2(record: SessionRecord19): SessionRecord19 {
+    this.cache.set(record.id, record);
+    return { ...record, tags: [...record.tags, 'format'] };
+  }
+
+  saveSession3(record: SessionRecord19): SessionRecord19 {
+    this.cache.set(record.id, record);
+    return { ...record, tags: [...record.tags, 'save'] };
+  }
+
+  validateSession4(record: SessionRecord19): SessionRecord19 {
+    this.cache.set(record.id, record);
+    return { ...record, tags: [...record.tags, 'validate'] };
+  }
+
+  saveSession5(record: SessionRecord19): SessionRecord19 {
+    this.cache.set(record.id, record);
+    return { ...record, tags: [...record.tags, 'save'] };
+  }
+
+}
