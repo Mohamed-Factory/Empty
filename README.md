@@ -6,3 +6,6 @@ indexing takes long enough to watch its progress state.
 
 None of this is real product code, and it contains no secrets or customer data.
 It doesn't need to build or run; it only needs to be indexed.
+
+
+Are we going to have breakfast?
